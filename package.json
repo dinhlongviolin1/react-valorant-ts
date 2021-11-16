@@ -18,20 +18,11 @@
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "npm run build"
-    }
-  },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
