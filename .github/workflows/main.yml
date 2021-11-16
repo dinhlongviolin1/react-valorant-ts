@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [10, 12]
+        node: [14]
 
     steps:
       - name: Checkout
@@ -25,5 +25,3 @@ jobs:
         run: npm install
       - name: Build the project
         run: npm run build --if-present
-      - name: Run tests
-        run: npm test
