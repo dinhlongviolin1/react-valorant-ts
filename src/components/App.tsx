@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Login from "./Login";
-import { store_data } from "../utils/requests";
 
 function App() {
-    useEffect(() => {
-        store_data("dinhlongviolin", "long300800").then((loginData) => console.log(loginData));
-    }, []);
-    return <Login />;
+    const [storeData, setstoreData] = useState("");
+    return !storeData ? <Login setstoreData={setstoreData} /> : <div>{JSON.stringify(storeData)}</div>;
 }
 
 export default App;
