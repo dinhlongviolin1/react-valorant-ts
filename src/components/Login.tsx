@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { store_data } from "../utils/requests";
-import { AppProps } from "../utils/interface";
+import { AppProps, StoreData } from "../utils/interface";
 
 import logo from "../img/valorant_logo.png";
 import "./Login.css";
@@ -24,12 +24,12 @@ export default function Login(props: AppProps) {
         setisLoading(true);
         store_data(username, password, region)
             .then((userStoreData) => {
-                if ("error" in userStoreData) {
+                if (userStoreData?.error) {
                     setisLoading(false);
-                    return alert(userStoreData["error"].toString());
+                    return alert(userStoreData.error.toString());
                 }
                 resetData();
-                props.setstoreData(userStoreData);
+                props.setstoreData(userStoreData as StoreData);
             })
             .catch((error) => {
                 console.log(error);
