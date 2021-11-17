@@ -1,12 +1,10 @@
-import React, { FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 import { store_data } from "../utils/requests";
+import { AppProps } from "../utils/interface";
 
 import logo from "../img/valorant_logo.png";
 import "./Login.css";
 
-interface AppProps {
-    setstoreData: React.Dispatch<React.SetStateAction<string>>;
-}
 export default function Login(props: AppProps) {
     const [username, setusername] = useState("");
     const [password, setpassword] = useState("");
