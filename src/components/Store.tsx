@@ -43,7 +43,7 @@ export default function Store(props: AppProps) {
                     </div>
                 </div>
             </nav>
-            <div className="max-w-8xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-5 lg:mt-6">
+            <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 mt-4 sm:mt-5 lg:mt-6">
                 <Carousel
                     className="rounded-sm"
                     autoPlay={true}
