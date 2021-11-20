@@ -3,7 +3,14 @@ import { store_data } from "../utils/requests";
 import { AppProps, StoreData } from "../utils/interface";
 
 import logo from "../img/valorant_logo.png";
-import "./Login.css";
+import backgroundImage from "../img/valorant_desktop_background_2x.png";
+
+const backgroundImg: React.CSSProperties = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "left center",
+    backgroundSize: "cover",
+};
 
 export default function Login(props: AppProps) {
     const [username, setusername] = useState("");
@@ -38,7 +45,7 @@ export default function Login(props: AppProps) {
             });
     };
     return (
-        <div className="w-screen h-screen background-img flex flex-col justify-center items-center">
+        <div className="w-screen h-screen flex flex-col justify-center items-center" style={backgroundImg}>
             <div className="bg-white w-min p-14">
                 <div className="w-80 sm:w-96">
                     <div className="mb-7">
